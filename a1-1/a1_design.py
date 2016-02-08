@@ -106,6 +106,28 @@ class Matrix():
         '''
         pass
 
+    def transpose(self):
+        '''(Matrix) -> NoneType
+        Applies the transpose operation to the Matrix, where the rows and the
+        columns are switched.
+        '''
+        pass
+
+    def swap_col(self, c1, c2):
+        '''(Matrix, int, int) -> NoneType
+        Switches c1 (some specified column number) to c2, and c2 to c1
+        '''
+        pass
+
+
+    def swap_row(self, r1, r2):
+        '''(Matrix, int, int) -> NoneType
+        Switches r1 (some specified row number) to r2, and r2 to r1
+        '''
+        pass
+
+
+
 
 
 
