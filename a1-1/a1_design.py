@@ -127,6 +127,60 @@ class Matrix():
         pass
 
 
+class OneDimensionalMatrix (Matrix):
+    ''' class representing a one dimensional matrix, inheriting from the
+    orignal Matrix class'''
+
+    def __int__(self, n_col):
+        '''(Matrix, int) -> NoneType'''
+        pass
+
+    def set_value(self, n_col, item):
+        '''(OneDimensionalMatrix, int, int or str) -> NoneType
+        Sets the value of an already existing cell, in the One Dimensinal
+        Matrix.
+        '''
+        pass
+
+    def add_value(self, item):
+        '''(OneDimensionalMatrix, int or str) -> NoneType
+        Add a value at the end of the One Dimensinal Matrix.
+        '''
+        pass
+
+
+    def get_value(self, n_col):
+        '''(OneDimensionalMatrix, int) -> int or str
+        Get a value at the given index of the One Dimensinal Matrix.
+        '''
+        pass
+
+
+    def add(self, c1, c2):
+        '''(Matrix, int, int) -> int or str
+        Add values c1 +  c2
+        where c1 resolves to a value, saved at the given cell.
+        '''
+        pass
+
+    def mult(self, c1, c2):
+        '''(Matrix, int, int) -> int or str
+        Do this: c1 *  c2
+        If the type of the Matrix is string return an String indicating they
+        messed up
+        '''
+        pass
+
+
+
+    def diff(self, c1, c2):
+        '''(Matrix, int, int) -> int or str
+        Do this: c1 -  c2
+        If the type of the Matrix is string return an String indicating they
+        messed up
+        '''
+        pass
+
 
 
 
