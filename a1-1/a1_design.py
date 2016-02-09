@@ -183,8 +183,39 @@ class OneDimensionalMatrix (Matrix):
 
 
 
+class SymmetricMatrix(Matrix):
+    '''Class representing a Symmetric Matrix, inherits some properties from the
+    main Matrix '''
+
+    def set_value(self, n_row, n_col, item):
+        '''(SymmetricMatrix, int, int, int or str) -> NoneType
+        Changes the values of the given cells as well as the ones that mirror
+        it. Over rides the defaut method from the Matrix class.
+        '''
+        pass
 
 
+class SquareMatrix(Matrix):
+    '''Class representing a Square Matrix, inherits some properties from the
+    main Matrix '''
 
+    def set_diagonal(self, n_pos, item):
+        '''(SquareMatrix, int, int or str) -> NoneType
+        Changes the value of the cell on the diagnol at the given position.
+        '''
+        pass
 
+    def get_diagonal(self, n_pos):
+        '''(SquareMatrix, int,int or str) -> int or str
+        Get the value of the cell on the diagnol at the given position.
+        '''
+        pass
 
+class IdentityMatrix(SquareMatrix):
+    '''Class representing an Identity Matrix inherits from the Square Matrix
+    and the main Matrix class'''
+
+    def __init__(self, n_row, n_col, int_diag):
+        '''(IdentityMatrix, int, int, int) -> NoneType
+        '''
+        pass
