@@ -1,0 +1,81 @@
+# HEAP SORT - in place sort, just like bubble sort.
+we use a max heap
+starting list = [3,2,4,7,9,6,5,8]
+## insertion of elements in the heap
+n           height of heap
+1           0
+2           1
+3           1
+4           2
+5           2
+6           2
+7           2
+8           3
+can be formulated as floor(log base 2 (n)) = O(logn)r
+why is the base changed to 10?
+Because under big oh log base of anything is log base of anything else.
+Basically the base doens't matter.
+Insertion: O(nlogn)
+where n = the number of extractions/insertion and logn = per extraction/insertion
+Extraction: O(nlogn)
+insert the starting list into the heap, but the heap uses the first half of the
+same list. So entering 3 into the heap wouldn't change the data at all.
+## iterations
+n1 insert 3 # nothing changes in the list, 3 is root in imaginary list
+n2 insert 2 # nothing changes in the list, 2 is left child in imaginary list
+n3 insert 4 # 4 > 3 so after insertion you bubble up once.
+n4 ...      # I think you get the idea....
+In simple terms, you are taking the input list and mutating that into a heap
+list.
+after all the iterations you get [9,8,6,7,4,3,5,2]
+## extractions
+n1 extract 9 # move 9 to the back of the list, put 2 in the front and bubble
+               down.
+You are effectively swapping the places in the list.
+So if you remove 8 then 5 will replace it and 8 will be before 9 at the end of
+list which represent the non-heap part of the list.
+
+# QUICK SORT - this should suggest recursion to you.
+starting list = [6,5,2,4,8,7,3,9]
+relies on passes. called pivots
+first pivot could be the last or the first item
+here we are picking 9
+now we divide the list into things greater than 9 and lesser than 9
+after that go to the element to left (because we started at the end) and repeat
+the proccess.
+What about the running time?
+- One pivot pass - O(n)
+in the worse case the list shrinks by 1 that would be
+(n-1) + (n-2) + (n-3) + (n-4) + .... + 1
+using the sigma notation formulas you get n^2
+O(n^2)
+
+
+Tutorial
+#######################
+### Time Complexity ###
+#######################
+
+mesuring the worst case scenario.
+Steps:
+        1 - Steps each / Order 1
+        Assignment
+        return
+        math operations
+        swapping (think of them as re-assignment)
+        if/else conditions
+def sum(n):
+    sum = 0                         # this is 1 step
+    for i in range(1,n+1):          # n steps
+        theSum = theSum + i         # 2 steps (math op and reassignment)
+    return theSum                   # 1 step
+print(sum(10))                      # 2n + 2 (2n because 2 was inside the loop
+of n)
+now instead of writing O(2n+2) it would be O(n) becasuse as n -> inf the
+constants stop mattering as much.
+
+Wednesday's Lecture
+missing merge sort
+
+
+
